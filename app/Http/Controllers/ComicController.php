@@ -39,6 +39,12 @@ class ComicController extends Controller
     {
         $comicAdd = $request->all();
 
+        $request->validate([
+            'title' => 'required|unique:comics|max:100',
+            'type' => 'required|max:100',
+            // ecc ecc
+        ]);
+
         $new_comic = new Comic();
         // primo metodo per salvare i dati
         // $new_comic->title = $comicAdd['title'];
@@ -112,4 +118,3 @@ class ComicController extends Controller
         return redirect()->route('comics.index');
     }
 }
-        

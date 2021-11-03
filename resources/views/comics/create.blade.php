@@ -4,6 +4,17 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
+                {{-- aggiungo il messaggio di errore nel caso in cui i campi del validate non vengano rispettati --}}
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                
                 <form action="{{ route('comics.store') }}" method="post">
                     @csrf
                     @method('POST')
