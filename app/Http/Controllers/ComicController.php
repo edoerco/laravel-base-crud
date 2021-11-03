@@ -75,7 +75,9 @@ class ComicController extends Controller
      */
     public function edit($id)
     {
-        //
+        // findOrFail è il metodo per abbreviare l'if
+        $editComic = Comic::findOrFail($id);
+        return view('comics.edit', compact('editComic'));
     }
 
     /**
@@ -85,9 +87,13 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Comic $editComic)
     {
-        //
+        $data = $request->all();
+        // dd($editComic);
+        $editComic->update($data);
+
+        return redirect()->route('comics.index');
     }
 
     /**
