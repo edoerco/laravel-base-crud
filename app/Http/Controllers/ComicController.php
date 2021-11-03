@@ -45,7 +45,7 @@ class ComicController extends Controller
         // $new_comic->description = $comicAdd['description'];
         // $new_comic->price = $comicAdd['price'];
         // $new_comic->series = $comicAdd['series'];
-        // $new_comic->sale_data = $comicAdd['sale_date'];
+        // $new_comic->sale_date = $comicAdd['sale_date'];
         // $new_comic->type = $comicAdd['type'];
 
         // secondo metodo per salvare i dati

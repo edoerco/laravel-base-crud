@@ -18,7 +18,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="price" class="form-label">Prezzo</label>
-                        <input type="text" name="price" class="form-control" id="price" placeholder="Inserisci il prezzo">
+                        <input type="number" name="price" class="form-control" id="price" placeholder="Inserisci il prezzo">
                     </div>
                     <div class="mb-3">
                         <label for="series" class="form-label">Serie</label>
@@ -26,7 +26,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="sale_date" class="form-label">Data di vendita</label>
-                        <input type="date" name="sale_date" class="form-control" id="sale_date" placeholder="Inserisci la data">
+                        <input type="text" name="sale_date" class="form-control" id="sale_date" placeholder="Inserisci la data">
                     </div>
                     <div class="mb-3">
                         <label for="type" class="form-label">Genere</label>
